@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header com título e botões de formatação -->
+    <header class="header">
+        <div class="title">Markdown Editor</div>
+        <div class="toolbar">
+            <button onclick="applyMarkdown('# ')">H1</button>
+            <button onclick="applyMarkdown('## ')">H2</button>
+            <button onclick="applyMarkdown('### ')">H3</button>
+            <button onclick="applyMarkdown('#### ')">H4</button>
+            <button onclick="applyMarkdown('##### ')">H5</button>
+            <button onclick="applyMarkdown('###### ')">H6</button>
+            <button onclick="applyMarkdown('**bold**')">B</button>
+            <!-- Botão de itálico com a letra "I" como rótulo -->
+            <button onclick="applyMarkdown('*italic*')">I</button>
+            <button onclick="applyMarkdown('[Link](url)')">Link</button>
+            <button onclick="applyMarkdown('> ')">Quote</button>
+            <button onclick="applyMarkdown('`code`')">Code</button>
+            <button onclick="applyMarkdown('- List item')">List</button>
+            <button onclick="applyMarkdown('1. Ordered item')">Ordered List</button>
+            <button onclick="applyMarkdown('| Header 1 | Header 2 |\n| -------- | -------- |\n| Row 1 Col 1 | Row 1 Col 2 |\n')">Table</button>
+            <button onclick="applyMarkdown('---')">Horizontal Line</button>
+            <button onclick="applyMarkdown('![Alt text](image-url)')">Image</button>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal com Linha, Editor e Preview -->
+    <div class="container">
+        <div class="line-numbers" id="line-numbers-editor">
+            <!-- Contagem de linhas para o editor -->
+        </div>
+        <div class="editor">
+            <textarea id="markdown-input" placeholder="Write your markdown here..."></textarea>
+        </div>
+        <div class="line-numbers" id="line-numbers-preview">
+            <!-- Contagem de linhas para o preview -->
+        </div>
+        <div class="preview">
+            <div id="preview-output"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
